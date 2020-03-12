@@ -22,7 +22,7 @@ div:nth-child(1) {
 }
 
 div:nth-child(2) {
-  padding: 1em 0;
+  padding: 0em 2em;
   height: 100%;
 }
 
@@ -36,7 +36,6 @@ div:nth-child(3) {
 img {
   display: block;
   width: 100%;
-  height: 100%;
 }
 p {
   display: inline-block;
@@ -52,15 +51,17 @@ a {
   color: slateblue;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   body {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: "header header";
   }
-  img {
-    width: auto;
-    height: auto;
+
+  div:nth-child(2) {
+    padding: 0em;
+    margin: 0 auto;
+    min-height: 80%;
   }
 }
